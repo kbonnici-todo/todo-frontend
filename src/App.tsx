@@ -1,8 +1,5 @@
 import "./App.css";
-
-function Header() {
-  return <h1 id="app-header">Todo List</h1>;
-}
+import Header from "./components/Header/Header";
 
 function App() {
   return (
