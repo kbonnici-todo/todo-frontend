@@ -4,11 +4,16 @@ import Header from "./components/Header/Header";
 import TodoList from "./components/TodoList/TodoList";
 import { Todo } from "./types/common";
 
+const data: Todo[] = [
+  { description: "foo blah", isDone: false },
+  { description: "echo", isDone: true },
+];
+
 function App() {
   const [list, setList] = useState<Todo[]>([]);
 
   useEffect(() => {
-    setList([{ description: "foo blah", isDone: false }]);
+    setList(data); // TODO: call backend API to retrieve data
   }, []);
 
   return (
