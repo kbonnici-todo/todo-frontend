@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Todo } from "../../types/common";
 
 type TodoItemProps = {
@@ -5,5 +6,17 @@ type TodoItemProps = {
 };
 
 export default function TodoItem(props: TodoItemProps) {
-  return <div>{props.item.description}</div>;
+  const [checked, setchecked] = useState(props.item.isDone);
+
+  const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setchecked(e.target.checked);
+  };
+
+  return (
+    <li>
+      <input type="checkbox" checked={checked} onChange={handleCheck} />
+
+      {props.item.description}
+    </li>
+  );
 }
