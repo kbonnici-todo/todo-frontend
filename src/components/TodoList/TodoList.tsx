@@ -7,5 +7,15 @@ type TodoListProps = {
 };
 
 export default function TodoList(props: TodoListProps) {
-  return props.todoList.map((item: Todo) => <TodoItem item={item} />);
+  return (
+    <div id="todo-list-container">
+      <h2 id="todo-list-title">{props.title ?? "No Title"}</h2>
+
+      <ul id="todo-list">
+        {props.todoList.map((item: Todo, idx: number) => (
+          <TodoItem item={item} key={idx} />
+        ))}
+      </ul>
+    </div>
+  );
 }
