@@ -13,8 +13,13 @@ export default function TodoItem(props: TodoItemProps) {
   };
 
   return (
-    <li>
-      <input type="checkbox" checked={checked} onChange={handleCheck} />
+    <li className="todo-item">
+      <input
+        className="checkbox"
+        type="checkbox"
+        checked={checked}
+        onChange={handleCheck}
+      />
 
       {props.item.description}
     </li>
