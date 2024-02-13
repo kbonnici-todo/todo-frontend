@@ -9,6 +9,7 @@ export default function TodoItem(props: TodoItemProps) {
   const [checked, setchecked] = useState(props.item.isDone);
 
   const handleCheck = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // TODO: call api to persist change
     setchecked(e.target.checked);
   };
 
