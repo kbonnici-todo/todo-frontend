@@ -1,5 +1,6 @@
 import { Todo } from "../../types/common";
 import TodoItem from "../TodoItem/TodoItem";
+import "./TodoList.css";
 
 type TodoListProps = {
   title?: string;
