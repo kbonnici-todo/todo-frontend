@@ -1,0 +1,33 @@
+:root {
+  --checkbox-color: #8a2be2;
+}
+
+.todo-item {
+  list-style: none;
+  font-size: large;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  border: 2px solid var(--checkbox-color);
+  outline: none;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: var(--checkbox-color);
+  text-decoration: line-through;
+}
+
+.checkbox:checked+label {
+  text-decoration: line-through;
+  color: #999;
+  text-decoration-thickness: 2px;
+  text-decoration-style: solid;
+}

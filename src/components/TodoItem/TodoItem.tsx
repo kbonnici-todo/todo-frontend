@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Todo } from "../../types/common";
+import "./TodoItem.css";
 
 type TodoItemProps = {
   item: Todo;
@@ -22,7 +23,7 @@ export default function TodoItem(props: TodoItemProps) {
         onChange={handleCheck}
       />
 
-      {props.item.description}
+      <label htmlFor="checkbox">{props.item.description}</label>
     </li>
   );
 }
