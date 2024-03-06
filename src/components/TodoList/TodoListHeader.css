@@ -1,0 +1,32 @@
+#todo-list-header {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#todo-list-title {
+  margin-right: 20px;
+  padding-top: 0px;
+}
+
+#todo-list-title-edit {
+  background: transparent;
+  border: none;
+  padding-top: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#todo-list-title-edit:hover {
+  background-color: lightgrey;
+}
+
+#todo-list-title-edit:active {
+  background-color: darkgrey;
+}
+
+#todo-list-title-edit-icon {
+  width: 25px;
+  height: 25px;
+}
