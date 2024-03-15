@@ -16,9 +16,9 @@ export default function TodoListHeader(props: TodoListHeaderProps) {
   return (
     <div id="todo-list-header">
       {editingTitle ? (
-        <input />
+        <input id="title-editor" className="todo-list-title" />
       ) : (
-        <h2 id="todo-list-title">{props.title ?? "No Title"}</h2>
+        <h2 className="todo-list-title">{props.title ?? "No Title"}</h2>
       )}
       <button id="todo-list-title-edit" onClick={onClickEditTitle}>
         <FiEdit2 id="todo-list-title-edit-icon" />

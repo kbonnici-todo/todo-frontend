@@ -10,16 +10,24 @@ const data: Todo[] = [
 ];
 
 function App() {
-  const [list, setList] = useState<Todo[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([]);
 
+  async function fetchTodos() {
+    const result = await fetch("http://localhost:3000/todos");
+    const data = (await result.json()) as Todo[];
+    setTodos(data);
+  }
   useEffect(() => {
-    setList(data); // TODO: call backend API to retrieve data
+    fetchTodos();
+  }, []);
+  useEffect(() => {
+    setTodos(data); // TODO: call backend API to retrieve data
   }, []);
 
   return (
     <>
       <Header />
-      <TodoList todoList={list} />
+      <TodoList todoList={todos} />
     </>
   );
 }
